@@ -1,0 +1,31 @@
+mariadb是mysql的一个分支，二进制兼容，开源更好一些
+
+如果部署在linux服务器上：linux连接登录的方式：
+
+```ssh user@host -p port```
+
+ 如果部署在docker里面：
+
+```docker exec -it mysql /bin/bash ```
+
+
+
+找到群晖中mariadb的位置：
+
+cd /volume1/@appstore/MariaDB10/usr/local/mariadb10/bin
+
+ 
+
+登录数据库服务：
+
+./mysql -u root -p
+
+ 
+
+注意所有SQL语句需要保持 ;结尾
+
+
+
+查看所有库：
+
+show databases;
