@@ -1,3 +1,7 @@
+# MySQL学习笔记
+
+## 环境准备
+
 mariadb是mysql的一个分支，二进制兼容，开源更好一些
 
 如果部署在linux服务器上：linux连接登录的方式：
@@ -20,12 +24,23 @@ cd /volume1/@appstore/MariaDB10/usr/local/mariadb10/bin
 
 ./mysql -u root -p
 
- 
+用户管理，包括是否能在任意地址登录信息记录在mysql.user表格里面
+
+ ## SQL语句
 
 注意所有SQL语句需要保持 ;结尾
 
 
 
-查看所有库：
+| 操作         | 命令                                             |
+| ------------ | ------------------------------------------------ |
+| 查看所有库   | show databases;                                  |
+| 创建数据库   | create database db1;                             |
+| 切换数据库   | use db1;                                         |
+| 创建一个用户 | CREATE USER 'user'@'%' IDENTIFIED BY 'password'; |
+| 授权         | GRANT ALL ON *.* TO 'user'@'%';                  |
+| 删库         | drop database db1；                              |
+|              |                                                  |
+|              |                                                  |
+|              |                                                  |
 
-show databases;
